@@ -4,9 +4,9 @@
   "description": "Example off-chain keeper bot for the Soroban Keeper Network",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "start:testnet": "NETWORK=testnet node index.js",
-    "start:mainnet": "NETWORK=mainnet node index.js",
+    "start": "node init && node index.js",
+    "start:testnet": "node init && NETWORK=testnet node index.js",
+    "start:mainnet": "node init && NETWORK=mainnet node index.js",
     "test": "node --test",
     "lint": "eslint ."
   },
@@ -21,12 +21,12 @@
   "dependencies": {
     "@soroban-keeper-network/sdk": "file:../../packages/sdk-ts",
     "@stellar/stellar-sdk": "^16.2.0",
-    "dotenv": "^18.0.3"
+    "dotenv": "^18.0.8"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^10.8.0",
-    "globals": "^17.12.0"
+    "globals": "^17.13.0"
   },
   "engines": {
     "node": ">=20.0.0"
